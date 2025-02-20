@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Password per proteggere l'accesso
-PASSWORD = "mypassword"
+PASSWORD = "Synergia.ai"
 
 def check_password():
     """Controlla se la password inserita è corretta"""
