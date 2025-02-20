@@ -1,4 +1,21 @@
 import streamlit as st
+
+# Password per proteggere l'accesso
+PASSWORD = "mypassword"
+
+def check_password():
+    """Controlla se la password inserita è corretta"""
+    st.sidebar.header("🔒 Accesso Riservato")
+    password = st.sidebar.text_input("Inserisci la password:", type="password")
+    if password == PASSWORD:
+        return True
+    else:
+        st.warning("❌ Password errata. Riprova.")
+        return False
+
+# Se la password è errata, non mostrare l'app
+if not check_password():
+    st.stop()
 from docx import Document
 import os
 from collections import defaultdict
